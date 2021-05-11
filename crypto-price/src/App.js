@@ -35,14 +35,13 @@ function App() {
   };
 
   const filteredCoins = coins.filter((coin) => {
-    console.log("here!!!!!!");
     return coin.name.toLowerCase().includes(search.toLowerCase());
   });
 
   return (
     <div className="coin-app">
       <div className="coin-search">
-        <h1 className="coin-text">Search a currency</h1>
+        <h1 className="coin-text">Search Cryptocurrency</h1>
         <form>
           <input
             type="text"
@@ -66,8 +65,10 @@ function App() {
       {/* {loading === true && <div className="coin-loading">Loading......</div>} */}
       {loading === true &&
         [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => {
-          return <SkeletonCoin />;
+          return <SkeletonCoin key={n} />;
         })}
+
+      {console.log("what?", filteredCoins)}
 
       {loading === false &&
         filteredCoins.map((coin) => {

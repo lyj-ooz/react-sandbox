@@ -1,0 +1,27 @@
+.person {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+
+.person img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 0.6rem;
+  object-fit: cover;
+}
+
+.person div {
+  margin: auto 0;
+}
+
+.person div p {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.person div h4,
+.person div p {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}

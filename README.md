@@ -5,3 +5,6 @@
 ## 완성한 미니 프로젝트
 
 - [암호화페 검색하는 미니 사이트](https://github.com/lyj-ooz/react-sandbox/tree/master/crypto-price)
+- [birthday list UI](https://github.com/lyj-ooz/react-sandbox/tree/master/birthday)
+- [tour list UI](https://github.com/lyj-ooz/react-sandbox/tree/master/tours)
+- [user review UI](https://github.com/lyj-ooz/react-sandbox/tree/master/user-review)

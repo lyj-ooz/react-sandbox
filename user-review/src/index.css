@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #00b2d1;
+  --secondary-color: #d2f8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 70vw;
+  max-width: 500px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title .underline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  height: 2px;
+  width: 100px;
+  background-color: var(--primary-color);
+}
+
+.review {
+  padding: 1rem 1.9rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.img-container {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img-container .person-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 7px -3px 0px var(--primary-color);
+}
+
+.img-container .quote-icon {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 3%;
+  left: 36%;
+  text-align: center;
+  line-height: 33px;
+}
+
+.author {
+  text-transform: capitalize;
+  margin-bottom: 0.3rem;
+}
+
+.job {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 20px;
+  margin-bottom: 1rem;
+}
+
+.button-container {
+  margin-bottom: 0.5rem;
+}
+
+.prev-btn,
+.next-btn {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.random-btn {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}

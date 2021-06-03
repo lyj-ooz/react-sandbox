@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.header select {
+  height: 30px;
+  width: 140px;
+  border: none;
+  border-radius: 5px;
+}
+
+section {
+  padding: 1rem;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}

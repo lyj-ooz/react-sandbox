@@ -14,7 +14,7 @@ function App() {
       <section className="menu section">
         <Title>Our Menu</Title>
         <Categories />
-        <Menu />
+        <Menu items={menuItems} />
       </section>
     </main>
   );

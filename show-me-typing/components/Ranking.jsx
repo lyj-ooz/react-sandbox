@@ -1,23 +1,25 @@
 import React from "react";
+import "./Ranking.css";
 
 const Ranking = () => {
   return (
-    <div
-      className="ranking-container"
-      style={{ backgroundColor: "lightgreen" }}
-    >
-      <div className="ranking-title">RANKING</div>
-      <div className="ranking-list">
-        <div className="ranking-people">
-          <div className="ranking-person">noname</div>
-          <div className="ranking-person">yello123</div>
-          <div className="ranking-person">whale000</div>
-        </div>
-        <div className="ranking-scores">
-          <div className="ranking-score">100</div>
-          <div className="ranking-score">150</div>
-          <div className="ranking-score">783</div>
-        </div>
+    <div className="ranking-container">
+      <div className="outline">
+        <div className="ranking-title">RANKING</div>
+        <ul className="ranking-list">
+          <li>
+            <span className="ranking-person">happy123</span>
+            <span className="ranking-score">34500</span>
+          </li>
+          <li>
+            <span className="ranking-person">test11</span>
+            <span className="ranking-score">10000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+        </ul>
       </div>
     </div>
   );

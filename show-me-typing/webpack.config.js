@@ -49,5 +49,8 @@ module.exports = {
   devServer: {
     publicPath: "/",
     hot: true,
+    proxy: {
+      "/api": "http://localhost:8888",
+    },
   },
 };

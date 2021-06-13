@@ -5,3 +5,5 @@
 ### 어려웠던 점
 
 1. 이 게임을 CRA가 아니라 웹팩으로 빌드(?) 했더니 css 파일을 읽지 못했다. 에러메시지에 https://webpack.js.org/concepts/#loaders 를 참고하라고 해서 이 주소에 나온 글대로 조치하였으나 내 경우에는 'style-loader'도 설치한 후에 webpack.config.js 파일에 설정해준 후에야 css 파일을 읽을 수 있었다 휴
+
+2. mongoDB에 게임 유저 이름과 게임 점수를 저장해두고 이걸 불러와서 화면에서 점수에 따른 상위 유저들 목록을 보여주고 싶었는데 계속 404가 에러가 났다. 백엔드 서버는 8888번 포트였고 클라이언트 개발 서버는 8080번 포트였다. 여기저기 검색해본 결과 뭔가 설정 값을 추가해야 한다는 것을 알았고 'react webpack api'라고 검색하여 webpack 공식 문서에서 [관련 내용 - devServer.proxy 부분](https://webpack.js.org/configuration/dev-server/)을 찾아 똑같이 설정하였더니 드디어 내가 만든 백엔드 서버에서 데이터를 읽어왔다! webpack.config.js 파일 - devServer - proxy에 서버 주소를 입력했다. 다만 유튜브에서 봤던 튜토리얼은 CRA로 만든 프로젝트여서 그런지 package.json에 proxy를 추가했는데... 이건 웹팩으로 해서 그런가? 아무튼 데이터를 읽어와서 기쁘다 진짜.

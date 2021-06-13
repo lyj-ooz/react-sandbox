@@ -1,80 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Ranking.css";
 
+const sortArr = (arr) => {
+  console.log("sortArr !!!");
+  return arr.sort((a, c) => c.score - a.score);
+};
+
 const Ranking = () => {
+  console.log("Ranking 컴포넌트!!!");
+
+  const [scores, setScores] = useState([]);
+
+  const getScores = async () => {
+    console.log("getScores!!!");
+
+    try {
+      const res = await fetch("/api/scores");
+      const data = await res.json();
+      setScores(sortArr(data));
+      console.log("yay", data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    console.log("useEffect!!!");
+    getScores();
+  }, []);
+
   return (
     <div className="ranking-container">
       <div className="outline">
         <div className="ranking-title">RANKING</div>
         <ul className="ranking-list">
-          <li>
-            <span className="ranking-person">happy123</span>
-            <span className="ranking-score">34500</span>
-          </li>
-          <li>
-            <span className="ranking-person">test11</span>
-            <span className="ranking-score">10000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
-          <li>
-            <span className="ranking-person">chocolate1</span>
-            <span className="ranking-score">9000</span>
-          </li>
+          {scores.map(({ score, username, _id }) => {
+            return (
+              <li key={_id}>
+                <span className="ranking-person">{username}</span>
+                <span className="ranking-score">{score}</span>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

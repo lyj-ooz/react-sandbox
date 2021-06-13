@@ -1,14 +1,9 @@
 .ranking-container {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
   background-color: #fde7c6;
-  border-bottom: 1px solid #4161b8;
-  /* border-right: 1px solid #4161b8; */
   color: #4161b8;
-  height: 100vh;
-  padding-top: 10px;
+  max-height: 100vh;
+  padding-top: 3.25vw;
+  padding-bottom: 30px;
 }
 
 .outline {
@@ -16,7 +11,8 @@
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
-  height: 80%;
+  /* height: 80%; */
+  /* min-height: 300px; */
   position: relative;
 }
 
@@ -24,10 +20,10 @@
   content: "";
   background-color: #4161b8;
   position: absolute;
-  top: 8px;
-  left: -19px;
-  height: 100.5%;
-  width: 18px;
+  top: 7px;
+  left: -17px;
+  height: 101.3%;
+  width: 16px;
   transform: skewY(-45deg);
 }
 
@@ -35,9 +31,9 @@
   content: "";
   background-color: #4161b8;
   position: absolute;
-  bottom: -19px;
-  right: 8px;
-  height: 18px;
+  bottom: -17px;
+  right: 7px;
+  height: 16px;
   width: 100.5%;
   transform: skewX(-45deg);
 }
@@ -52,10 +48,14 @@
 
 .ranking-list {
   padding: 2.5vw;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 .ranking-list .ranking-person,
 .ranking-list .ranking-score {
+  font-size: 2vw;
+
   width: 50%;
   display: inline-block;
   padding-top: 0.2em;

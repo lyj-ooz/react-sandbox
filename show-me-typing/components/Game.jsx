@@ -1,8 +1,9 @@
 import React from "react";
+import "./Game.css";
 
 const Game = () => {
   return (
-    <div className="game-container" style={{ backgroundColor: "lightsalmon" }}>
+    <div className="game-container">
       <div className="game-time">10</div>
       <div className="game-word">Apple</div>
       <input type="text" />

@@ -3,7 +3,7 @@ import "./Title.css";
 
 const Title = () => {
   return (
-    <header>
+    <header className="header">
       <h1>SHOW ME YOUR TYPING!</h1>
     </header>
   );

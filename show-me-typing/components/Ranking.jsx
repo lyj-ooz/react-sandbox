@@ -19,6 +19,62 @@ const Ranking = () => {
             <span className="ranking-person">chocolate1</span>
             <span className="ranking-score">9000</span>
           </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
+          <li>
+            <span className="ranking-person">chocolate1</span>
+            <span className="ranking-score">9000</span>
+          </li>
         </ul>
       </div>
     </div>

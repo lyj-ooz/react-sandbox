@@ -28,6 +28,7 @@
 .game-container button {
   border: none;
   padding: 0.5em 1em;
+  font-family: inherit;
   font-size: 3.5vw;
   margin-top: 3vw;
   background-color: #4161b8;

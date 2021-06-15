@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, memo } from "react";
 
-const Timer = () => {
+const Timer = memo(({ refresh }) => {
   const [timer, setTimer] = useState("10");
   const intervalRef = useRef(null);
 
@@ -44,16 +44,17 @@ const Timer = () => {
   useEffect(() => {
     clearTimer(getDeadlineTime());
     return () => {
+      console.log("Timer 컴포넌트 사라짐..");
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, []);
+  }, [refresh]);
 
-  function onClickResetBtn() {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    clearTimer(getDeadlineTime());
-  }
+  // function onClickResetBtn() {
+  //   if (intervalRef.current) clearInterval(intervalRef.current);
+  //   clearTimer(getDeadlineTime());
+  // }
 
   return <div className="game-time">{timer}</div>;
-};
+});
 
 export default Timer;

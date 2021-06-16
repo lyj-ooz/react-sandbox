@@ -64,13 +64,16 @@ const Game = memo(({ setUpdateRanking }) => {
   const onSubmitTyping = useCallback((e) => {
     e.preventDefault();
 
-    if (word === inputValue.trim()) {
+    if (word === inputValue.trim().toLowerCase()) {
       console.log("일치");
       showNextWord();
       setInputValue("");
       updateScore();
       setRefresh((prev) => prev + 1);
-    } else if (word !== inputValue.trim() || remainZero === true) {
+    } else if (
+      word !== inputValue.trim().toLowerCase() ||
+      remainZero === true
+    ) {
       console.log("불일치 혹은 시간초과로 끝");
       setStart(false);
       setShowSave(true);
@@ -96,6 +99,7 @@ const Game = memo(({ setUpdateRanking }) => {
   const onSubmitScore = useCallback((e) => {
     e.preventDefault();
     console.log("form submit..!!");
+    if (username.trim() === "") return;
     const userData = {
       username: username,
       score: parseInt(score),
@@ -134,7 +138,8 @@ const Game = memo(({ setUpdateRanking }) => {
       {showSave || remainZero ? (
         <div className="game-save">
           <p>
-            You typed {inputValue} for {word}
+            You typed {inputValue.trim() === "" ? "nothing" : inputValue} for{" "}
+            {word}
           </p>
           <p>Your Score: {score}</p>
           <form onSubmit={onSubmitScore}>
@@ -144,10 +149,13 @@ const Game = memo(({ setUpdateRanking }) => {
                 type="text"
                 value={username}
                 onChange={onUsernameChange}
-                maxLength={20}
+                minLength={1}
+                maxLength={15}
+                pattern="[A-Z|a-z|0-9|ㄱ-ㅎ|가-힣][A-Z|a-z|0-9|ㄱ-ㅎ|가-힣]*"
                 required
               />
             </label>
+            <small>1-15 characters in length</small>
             <input type="submit" value="Save" />
           </form>
           <button className="close-btn" onClick={onClickClose}>
@@ -164,6 +172,7 @@ const Game = memo(({ setUpdateRanking }) => {
               disabled={!start}
               value={inputValue}
               onChange={onInputChange}
+              pattern="[a-z][a-z]*"
             />
           </form>
           <button onClick={onClickStartBtn} disabled={start}>

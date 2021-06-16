@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = express();
 const scoresRoute = require("./routes/scores");
+const wordsRoute = require("./routes/words");
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/scores", scoresRoute);
+app.use("/api/words", wordsRoute);
 
 app.listen(8888, () => {
   console.log("backend server is running...");

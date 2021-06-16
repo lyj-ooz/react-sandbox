@@ -6,7 +6,7 @@ const sortArr = (arr) => {
   return arr.sort((a, c) => c.score - a.score);
 };
 
-const Ranking = () => {
+const Ranking = ({ updateRanking }) => {
   console.log("Ranking 컴포넌트!!!");
 
   const [scores, setScores] = useState([]);
@@ -18,16 +18,14 @@ const Ranking = () => {
       const res = await fetch("/api/scores");
       const data = await res.json();
       setScores(sortArr(data));
-      console.log("yay", data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    console.log("useEffect!!!");
     getScores();
-  }, []);
+  }, [updateRanking]);
 
   return (
     <div className="ranking-container">

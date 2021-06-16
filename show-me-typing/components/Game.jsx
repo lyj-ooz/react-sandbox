@@ -89,7 +89,12 @@ const Game = memo(({ setUpdateRanking }) => {
   });
 
   const showNextWord = () => {
-    setWord(wordlist.current.pop());
+    if (wordlist.current.length > 0) {
+      setWord(wordlist.current.pop());
+    } else {
+      setStart(false);
+      setShowSave(true);
+    }
   };
 
   const updateScore = () => {
@@ -99,7 +104,7 @@ const Game = memo(({ setUpdateRanking }) => {
   const onSubmitScore = useCallback((e) => {
     e.preventDefault();
     console.log("form submit..!!");
-    if (username.trim() === "") return;
+
     const userData = {
       username: username,
       score: parseInt(score),

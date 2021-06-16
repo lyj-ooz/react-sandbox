@@ -77,24 +77,31 @@
   border: 2px solid #fde7c6;
   color: inherit;
   background-color: transparent;
-  margin-bottom: 0.7em;
   padding: 0.4em;
   font-size: 0.9em;
 }
 
 .game-save input[type="text"] {
   margin-left: 0.4em;
+  margin-bottom: 0.2em;
 }
 
 .game-save input[type="submit"] {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 0.7em;
 }
 
 .game-save input:focus {
   color: inherit;
   font-family: inherit;
+}
+
+.game-save small {
+  display: block;
+  font-size: 0.7em;
 }
 
 .game-save button {

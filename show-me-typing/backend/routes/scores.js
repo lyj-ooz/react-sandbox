@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Scores = require("../models/Scores");
+const Scores = require("../Models/Scores");
 
 //add("POST") a score
 router.post("/", async (req, res) => {

@@ -8,7 +8,7 @@
 
 ## 사용 기술
 
-- react, node.js, mongoDB, webpack
+- React, node.js, mongoDB, webpack
 - 라이브러리: dotenv, express, mongoose, cors (리액트도 라이브러리이긴 하지만..)
 
 ## API
